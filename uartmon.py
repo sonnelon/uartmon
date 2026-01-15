@@ -5,7 +5,11 @@ from os import system
 READ_SIZE = 1024
 
 def setup_logger(output: str | None):
-    logging.basicConfig(level=logging.INFO, format="[%(levelname)s] [%(asctime)s] %(message)s", datefmt="%H:%M:%S", filename=output if output else None)
+	logging.basicConfig(level=logging.INFO,
+		format="[%(levelname)s] [%(asctime)s] %(message)s",
+		datefmt="%H:%M:%S",
+		filename=output if output else None
+	)
 
 class Uartmon:
     _write_mode = False
@@ -34,7 +38,9 @@ class Uartmon:
         while not self.stop_event.is_set():
             try:
                 data = input("uartmon > ")
-                self.serial.write(data.encode())
+                encoded_data = data.encode()
+                self.serial.write(encoded_data)
+                logging.info("[TX] [hex=%s] [text=%s]", encoded_data.hex(), data.rstrip())
             except EOFError: break
 
     def _read_loop(self):
