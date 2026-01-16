@@ -1,8 +1,0 @@
-[INFO] [15:51:36] [TX] [hex=6c61647366] [text=ladsf]
-[INFO] [15:51:36] [RX] [hex=53657269616c20737461727465642e0d0a6c6f6f70210d0a] [text=Serial started.
-loop!]
-[INFO] [15:51:37] [RX] [hex=6c6f6f70210d0a] [text=loop!]
-[INFO] [15:51:38] [TX] [hex=616473666173646c73616466] [text=adsfasdlsadf]
-[INFO] [15:51:38] [RX] [hex=6c6f6f70210d0a492072656365697665643a2039370d0a] [text=loop!
-I received: 97]
-[INFO] [15:51:39] [TX] [hex=64736166616c736673] [text=dsafalsfs]
